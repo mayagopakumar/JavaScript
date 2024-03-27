@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<style type="text/css">
+
+		.demo{
+			width: 50vw;
+			height: 35vh;
+			border: 2px solid grey;
+			text-align: center;
+			padding: 70px 0;
+			margin-bottom: 30vh;
+			margin-top: 30vh;
+			margin-left: 25vw;
+			margin-right: 50vw;
+
+
+			
+		}
+		button{
+			width: 50px;
+			margin-bottom: 3px;
+			margin-left: 100px;
+		}
+		select{
+			width: 50px;
+			margin-bottom: 3px;
+			margin-left: 100px;
+		}
+		
+
+	</style>
+</head>
+<body class="bg-dark">
+	<div class="demo bg-light">
+
+			<label for="number1">Number 1:</label>
+			<input type="text" id="number1"><br>
+			<select id="calculate">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+			</select><br>
+			<label for="number2">Number 2:</label>
+			<input type="text" id="number2"><br>
+			
+			
+			<button type="button" onclick="myFunction()">=</button><br>
+			<label for="result">Result:</label>
+			<input type="text" id="result" class="ml-4"><br>
+
+	<div>
+	<script type="text/javascript">
+
+
+		function myFunction(){
+			var input1=document.getElementById("number1").value;
+			var input2=document.getElementById('number2').value;
+			var operation=document.getElementById('calculate').value;
+
+			if (operation==='+'){				
+					add(input1,input2);
+			}
+
+			if (operation==='-'){				
+					sub(input1,input2);	
+			}
+			if (operation==='*'){				
+					mul(input1,input2);		
+			}
+			if (operation==='/'){				
+					div(input1,input2);		
+			}
+		}
+		function add(input1,input2){
+
+			var s=parseInt(input1)+parseInt(input2);
+			document.getElementById('result').value=s;
+		}
+
+		function sub(input1,input2){
+			var s=parseInt(input1)-parseInt(input2);
+			document.getElementById('result').value=s;
+
+		}
+
+		function mul(input1,input2){
+			var s=parseInt(input1)*parseInt(input2);
+			document.getElementById('result').value=s;
+
+		}
+
+		function div(input1,input2){
+			var s=parseInt(input1)/parseInt(input2);
+			document.getElementById('result').value=s;
+
+		}
+
+	</script>		
+
+</body>
+</html>

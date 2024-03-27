@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>fibinocci series</title>
+</head>
+<body>
+	<h4>Fibonacci sequence </h4>
+	<label for="input">Enter the range:</label>
+	<input type="text" id="input">
+	<button type="button" onclick="myFunction()">Submit</button>
+
+
+	<script type="text/javascript">
+
+	  function myFunction(){
+	  	var n=0;
+	  	console.log(n);
+		var n1=1;
+		var n2=2;
+		var range=document.getElementById('input').value;
+		for(var i=1;i<=range-1;i++){
+			 
+			console.log(n1);  
+		    var x=n1+n2;
+		    n1=n2;
+		    n2=x;
+
+		}
+	}
+
+	</script>
+
+</body>
+</html>

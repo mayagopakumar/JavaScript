@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lottery draw</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		
+			.box{
+				width: 40vw;
+				height: 15vh;
+				border: 2px solid grey;
+				text-align: center;
+				padding: 70px 0;
+				margin-left: 30vw;
+				margin-right: 30vw;
+				margin-top: 40vh;
+				margin-bottom: 40vh;
+			}
+			input{
+				border: 1px solid black;
+			}
+
+	</style>
+
+</head>
+<body>
+	<div class="box">
+			<button type="button" onclick="myFunction()" data-toggle="modal" data-target="#myModal">click me</button>
+			<input type="text" id="result" class="text-danger">
+	</div>
+
+	<!-- modal -->
+
+	<div class="modal" id="myModal">
+    	<div class="modal-dialog">
+		      	<div class="modal-content">
+		        	<div class="modal-header">
+		          		<h4 class="modal-title">Winner</h4>
+		          		<button type="button" class="close" data-dismiss="modal">&times;</button>
+		       		</div>
+		        	<div class="modal-body" id="result1">the winner is </div>
+		        	<div class="modal-footer">
+		          		<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+		        	</div>
+		        </div>
+		</div>
+
+    </div>
+
+	<script type="text/javascript">
+
+		const array=[12345, 12346, 12347,12348,12349,12350];
+		function myFunction(){
+			const randomElement= array[Math.floor(Math.random()*array.length)];
+			console.log(randomElement);
+			document.getElementById('result').value=randomElement;
+			document.getElementById('result1').innerHTML=randomElement;
+		
+		}
+
+		
+
+
+	</script>
+
+</body>
+</html>

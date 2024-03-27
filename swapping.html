@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>variation</title>
+	<style type="text/css">
+
+		.container{
+			margin-left: 25vw;
+			margin-right: 25vw;
+		}
+
+		.list1{
+			width: 20vw;
+			height: 250px;
+			background-color: #D3D3D3;
+			float: left;
+		}
+		.list2{
+			width: 20vw;
+			height: 250px;
+			background-color: #A9A9A9;
+			float: right;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="list1">
+			<ul id="even">
+				<h4>Even numbers</h4>
+				<li>2</li>
+				<li>4</li>
+				<li>6</li>
+				<li>8</li>
+				<li>10</li>
+			</ul>
+		</div>
+		<div class="list2">
+			<ul id="odd">
+				<h4>Odd numbers</h4>
+				<li>1</li>
+				<li>3</li>
+				<li>5</li>
+				<li>7</li>
+				<li>9</li>
+			</ul>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		var x=document.getElementById('even');
+		var y=document.getElementById('odd');
+		x.addEventListener("click",myFunction);
+		y.addEventListener("click",myFunction1);
+		function myFunction(event){
+			if(event.target.tagName=="LI"){
+				var clickedItem=event.target;
+				y.appendChild(clickedItem);
+			}
+		}
+		function myFunction1(event){
+			if(event.target.tagName=="LI"){
+				var clickedItem=event.target;
+				x.appendChild(clickedItem);
+			}
+		}
+
+			
+		
+		
+	</script>
+
+</body>
+</html>
